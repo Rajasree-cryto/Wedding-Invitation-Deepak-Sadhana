@@ -1,0 +1,492 @@
+/* =========================================================
+   ROYAL INDIAN WEDDING STYLESHEET (FULL BACKGROUND FIT)
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    color: #3b0a11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Sets card-bg.jpg as the full background across the entire screen */
+    background: linear-gradient(rgba(15, 2, 4, 0.55), rgba(15, 2, 4, 0.55)), 
+                url('card-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 40px 15px;
+    overflow-x: hidden;
+}
+
+/* Floating Sparkles */
+.sparkles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: radial-gradient(circle, #ffd700 0%, rgba(255, 215, 0, 0) 70%);
+    border-radius: 50%;
+    animation: floatParticle linear infinite;
+    box-shadow: 0 0 10px #ffd700;
+}
+
+@keyframes floatParticle {
+    0% { transform: translateY(100vh) scale(0); opacity: 0; }
+    50% { opacity: 0.9; transform: translateY(50vh) scale(1.3); }
+    100% { transform: translateY(-10vh) scale(0); opacity: 0; }
+}
+
+/* Entrance Overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(12, 1, 3, 0.97);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease;
+}
+
+.overlay-card {
+    text-align: center;
+    padding: 45px 30px;
+    background: rgba(45, 5, 12, 0.92);
+    border: 2px solid #d4af37;
+    border-radius: 24px;
+    backdrop-filter: blur(12px);
+    max-width: 90%;
+    width: 440px;
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+}
+
+.glow-effect {
+    animation: glowPulse 3s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
+    50% { box-shadow: 0 0 45px rgba(255, 215, 0, 0.8); }
+}
+
+.mandala-icon {
+    font-size: 2.2rem;
+    color: #ffd700;
+    margin-bottom: 8px;
+    animation: spinSlow 20s linear infinite;
+}
+
+@keyframes spinSlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.shree {
+    font-family: 'Cinzel', serif;
+    color: #ffd700;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.overlay-sub {
+    color: #f7e7ce;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.font-italic {
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.overlay-title {
+    font-family: 'Great Vibes', cursive;
+    color: #ffffff;
+    font-size: 3.2rem;
+    margin: 15px 0 25px 0;
+    text-shadow: 0 2px 12px rgba(212, 175, 55, 0.6);
+}
+
+#openBtn {
+    background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
+    color: #1f0205;
+    border: 1px solid #fff5cc;
+    padding: 14px 36px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+    transition: all 0.3s ease;
+}
+
+#openBtn:hover {
+    background: linear-gradient(135deg, #fff5cc 0%, #ffd700 100%);
+    transform: scale(1.06);
+}
+
+/* Central Invitation Container */
+.main-wrapper {
+    width: 100%;
+    max-width: 620px;
+    z-index: 20;
+}
+
+.invitation-card {
+    position: relative;
+    background: rgba(255, 253, 247, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 3px double #d4af37;
+    border-radius: 24px;
+    padding: 50px 32px;
+    text-align: center;
+    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.7);
+}
+
+.watermark-bg {
+    display: none; /* Removed background overlay inside the card so text remains fully legible */
+}
+
+.shree-header {
+    font-family: 'Cinzel', serif;
+    color: #6d0a17;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.blessing-text {
+    font-size: 0.75rem;
+    color: #5a2e16;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin: 10px 0 5px 0;
+}
+
+.invite-subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    color: #6d0a17;
+    margin-bottom: 20px;
+}
+
+/* Circular Photo Frame for Couple */
+.photo-frame-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.photo-frame {
+    width: 175px;
+    height: 175px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(135deg, #ffd700, #6d0a17, #ffd700);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.45);
+    transition: transform 0.3s ease;
+}
+
+.photo-frame:hover {
+    transform: scale(1.04);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 50%;
+    border: 3px solid #fffbf2;
+}
+
+.couple-names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.4rem;
+    color: #5c0813;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.weds-tag {
+    display: block;
+    font-family: 'Cinzel', serif;
+    color: #9c721d;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+    margin: 4px 0;
+    font-weight: 600;
+}
+
+.family-details {
+    font-size: 0.88rem;
+    color: #5a2e16;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.family-details strong {
+    color: #6d0a17;
+    font-weight: 700;
+}
+
+.traditional-divider {
+    color: #9c721d;
+    font-size: 1.1rem;
+    margin: 22px 0;
+}
+
+.events-heading {
+    font-family: 'Cinzel', serif;
+    color: #6d0a17;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.travel-subtext {
+    font-size: 0.85rem;
+    color: #5a2e16;
+    margin-bottom: 20px;
+}
+
+/* Event List & Countdowns */
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.event-card {
+    background: #ffffff;
+    border: 1px solid #e2c99b;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 4px 15px rgba(109, 10, 23, 0.06);
+    transition: all 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.35);
+}
+
+.event-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.15rem;
+    color: #6d0a17;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.event-date {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #3b0a11;
+    margin-bottom: 10px;
+}
+
+.mini-countdown {
+    background: #fff8eb;
+    border: 1px solid #ebd5b3;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 12px;
+}
+
+.cd-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #6d0a17;
+    margin-bottom: 6px;
+}
+
+.timer-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.timer-box div {
+    background: #6d0a17;
+    color: #ffd700;
+    padding: 4px 8px;
+    border-radius: 6px;
+    min-width: 48px;
+}
+
+.timer-box span {
+    font-size: 1rem;
+    font-weight: 700;
+    display: block;
+}
+
+.timer-box p {
+    font-size: 0.6rem;
+    color: #fff8eb;
+}
+
+.venue-box {
+    background: #fff8eb;
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px dashed #d4af37;
+}
+
+.event-venue {
+    font-size: 0.85rem;
+    color: #4a2008;
+    margin-bottom: 10px;
+}
+
+.location-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(135deg, #6d0a17 0%, #4a0a12 100%);
+    color: #ffd700;
+    border: 1px solid #d4af37;
+    padding: 8px 22px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.location-btn:hover {
+    background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+    color: #1f0205;
+}
+
+/* Tourism & Map Section */
+.map-image-card {
+    background: #ffffff;
+    border: 2px solid #d4af37;
+    border-radius: 14px;
+    padding: 6px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tourism-map-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.subsection-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem;
+    color: #6d0a17;
+    margin: 18px 0 12px 0;
+    text-align: left;
+    font-weight: 700;
+}
+
+.airport-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.airport-card {
+    background: #fff8eb;
+    border: 1px solid #e2c99b;
+    border-left: 4px solid #6d0a17;
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+
+.airport-card h4 {
+    font-size: 0.92rem;
+    color: #6d0a17;
+    margin-bottom: 2px;
+}
+
+.airport-card p {
+    font-size: 0.82rem;
+    color: #3b0a11;
+}
+
+.small-info {
+    font-size: 0.78rem;
+    color: #7a4f32;
+    margin-top: 2px;
+}
+
+.destination-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.tag-card {
+    background: #ffffff;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+.tag-title {
+    display: block;
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: #6d0a17;
+}
+
+.tag-desc {
+    font-size: 0.78rem;
+    color: #5a2e16;
+}
+
+/* Footer */
+.invitation-footer p {
+    font-size: 0.75rem;
+    color: #5a2e16;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.invitation-footer h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem;
+    color: #6d0a17;
+    margin-top: 4px;
+    font-weight: 700;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 520px) {
+    .invitation-card {
+        padding: 40px 18px;
+    }
+    .couple-names {
+        font-size: 2.7rem;
+    }
+    .photo-frame {
+        width: 145px;
+        height: 145px;
+    }
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation | Dr. Deepak & Sadhna</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Floating Canvas Effects (Magical Golden Dust) -->
+    <div class="sparkles-container" id="sparkles"></div>
+
+    <!-- Welcome Overlay -->
+    <div id="overlay" class="overlay">
+        <div class="overlay-card glow-effect">
+            <div class="mandala-icon">☸</div>
+            <div class="shree">|| श्री गणेशाय नमः ||</div>
+            <p class="overlay-sub">WITH THE BLESSINGS OF OUR PARENTS AND ELDERS</p>
+            <p class="overlay-sub font-italic">We joyfully invite you to celebrate the wedding of</p>
+            <h1 class="overlay-title">Dr. Deepak & Sadhna</h1>
+            <button id="openBtn" onclick="openInvitation()">Unveil Invitation ✨</button>
+        </div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Main Invitation Card -->
+    <div class="main-wrapper">
+        <div class="invitation-card royal-shimmer">
+
+            <!-- Watermark Image Overlay (Couple Sitting Photo) -->
+            <div class="watermark-bg"></div>
+
+            <!-- Top Mantra -->
+            <div class="shree-header">|| श्री गणेशाय नमः ||</div>
+            <p class="blessing-text">WITH THE BLESSINGS OF OUR PARENTS AND ELDERS</p>
+            <p class="invite-subtitle">We joyfully invite you to celebrate the wedding of</p>
+
+            <!-- Couple Oval Frame -->
+            <div class="photo-frame-wrapper">
+                <div class="photo-frame">
+                    <img src="background.jpg" alt="Dr. Deepak and Ms. Sadhna">
+                </div>
+            </div>
+
+            <!-- Couple Names -->
+            <h1 class="couple-names">
+                Dr. Deepak Tripathi
+                <span class="weds-tag">weds</span>
+                Ms. Sadhna
+            </h1>
+
+            <!-- Parents Detail -->
+            <div class="family-details">
+                <p><strong>SON OF:</strong> SHRI. INDIRA PAL TRIPATHI</p>
+                <p><strong>DAUGHTER OF:</strong> SHRI. MOHAN LAL PYASI</p>
+            </div>
+
+            <div class="traditional-divider">🌸 🌺 🌸</div>
+
+            <!-- Events Section -->
+            <h2 class="events-heading">WEDDING CELEBRATIONS</h2>
+
+            <div class="events-list">
+                
+                <!-- Event 1: Tilak Utsav -->
+                <div class="event-card fade-in">
+                    <div class="event-header">
+                        <h3>TILAK UTSAV</h3>
+                        <span class="event-date">📅 Sunday, 29th November 2026</span>
+                    </div>
+                    
+                    <!-- Countdown Tilak -->
+                    <div class="mini-countdown">
+                        <p class="cd-title">⏳ Tilak Countdown:</p>
+                        <div class="timer-box">
+                            <div><span id="d1">00</span><p>Days</p></div>
+                            <div><span id="h1">00</span><p>Hrs</p></div>
+                            <div><span id="m1">00</span><p>Mins</p></div>
+                            <div><span id="s1">00</span><p>Secs</p></div>
+                        </div>
+                    </div>
+
+                    <div class="venue-box">
+                        <p class="event-venue">📍 Anand Bella Mariage Garden, Nagod, Dist. Satna (M.P.)</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Anand+Bella+Mariage+Garden+Nagod+Satna" target="_blank" class="location-btn">
+                            <span>📍 View Venue on Map</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Event 2: Mehndi, Haldi & Sangeet -->
+                <div class="event-card fade-in">
+                    <div class="event-header">
+                        <h3>MEHNDI, HALDI & SANGEET</h3>
+                        <span class="event-date">📅 Tuesday, 1st December 2026</span>
+                    </div>
+
+                    <!-- Countdown Sangeet -->
+                    <div class="mini-countdown">
+                        <p class="cd-title">⏳ Sangeet Countdown:</p>
+                        <div class="timer-box">
+                            <div><span id="d2">00</span><p>Days</p></div>
+                            <div><span id="h2">00</span><p>Hrs</p></div>
+                            <div><span id="m2">00</span><p>Mins</p></div>
+                            <div><span id="s2">00</span><p>Secs</p></div>
+                        </div>
+                    </div>
+
+                    <div class="venue-box">
+                        <p class="event-venue">📍 Nagod, District Satna (M.P.)</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Nagod+Satna+Madhya+Pradesh" target="_blank" class="location-btn">
+                            <span>📍 View Venue on Map</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Event 3: Barat & Wedding -->
+                <div class="event-card fade-in">
+                    <div class="event-header">
+                        <h3>BARAT & WEDDING (SADI)</h3>
+                        <span class="event-date">📅 Wednesday, 2nd December 2026</span>
+                    </div>
+
+                    <!-- Countdown Wedding -->
+                    <div class="mini-countdown">
+                        <p class="cd-title">⏳ Wedding Countdown:</p>
+                        <div class="timer-box">
+                            <div><span id="d3">00</span><p>Days</p></div>
+                            <div><span id="h3">00</span><p>Hrs</p></div>
+                            <div><span id="m3">00</span><p>Mins</p></div>
+                            <div><span id="s3">00</span><p>Secs</p></div>
+                        </div>
+                    </div>
+
+                    <div class="venue-box">
+                        <p class="event-venue">📍 Anant Ram Palace, Nowgong (Chhatarpur, M.P.)</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Anant+Ram+Palace+Nowgong+Chhatarpur" target="_blank" class="location-btn">
+                            <span>📍 View Venue on Map</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="traditional-divider">🌸 🌺 🌸</div>
+
+            <!-- Tourism & Travel Section -->
+            <h2 class="events-heading">EXPLORE NEARBY TOURISM</h2>
+            <p class="travel-subtext">Discover the heritage, wildlife & sacred spots around our venue!</p>
+
+            <div class="map-image-card fade-in">
+                <img src="tourism-map.jpg" alt="Nagod Tourism Map" class="tourism-map-img">
+            </div>
+
+            <div class="airports-section fade-in">
+                <h3 class="subsection-title">✈️ Nearest Airports</h3>
+                <div class="airport-grid">
+                    <div class="airport-card">
+                        <h4>1. Khajuraho Airport (HJR)</h4>
+                        <p><strong>Distance:</strong> ~88 km from Nagod</p>
+                        <p class="small-info">Connected with domestic flights via Delhi & Varanasi.</p>
+                    </div>
+                    <div class="airport-card">
+                        <h4>2. Prayagraj Airport (IXD)</h4>
+                        <p><strong>Distance:</strong> ~185 km from Nagod</p>
+                        <p class="small-info">Well-connected regional hub.</p>
+                    </div>
+                    <div class="airport-card">
+                        <h4>3. Varanasi International Airport (VNS)</h4>
+                        <p><strong>Distance:</strong> ~295 km from Nagod</p>
+                        <p class="small-info">Major national and international gateway.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tourism-destinations fade-in">
+                <h3 class="subsection-title">🏛️ Featured Tourism Spots</h3>
+                <div class="destination-tags">
+                    <div class="tag-card">
+                        <span class="tag-title">🕌 Khajuraho (~88 km)</span>
+                        <span class="tag-desc">UNESCO World Heritage Temple Complex & Art</span>
+                    </div>
+                    <div class="tag-card">
+                        <span class="tag-title">🐅 Panna Tiger Reserve (~29–46 km)</span>
+                        <span class="tag-desc">Pristine Wildlife & Tiger Safari Encounters</span>
+                    </div>
+                    <div class="tag-card">
+                        <span class="tag-title">🏰 Kalinjar Fort (~60 km)</span>
+                        <span class="tag-desc">Centuries of History & Panoramic Hill Views</span>
+                    </div>
+                    <div class="tag-card">
+                        <span class="tag-title">🛕 Maihar (~48 km)</span>
+                        <span class="tag-desc">Sacred Temple Destination with Cable Car Ride</span>
+                    </div>
+                    <div class="tag-card">
+                        <span class="tag-title">🕉️ Chitrakoot (~93 km)</span>
+                        <span class="tag-desc">Holy Town Associated with Lord Rama</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="traditional-divider">🌸 🌺 🌸</div>
+
+            <footer class="invitation-footer">
+                <p>PLEASE JOIN US AS WE BEGIN OUR NEW JOURNEY</p>
+                <h4>With Warm Regards: Tripathi & Pyasi Families</h4>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        function openInvitation() {
+            var audio = document.getElementById('bgMusic');
+            audio.play().catch(function(e) { console.log(e); });
+            
+            var overlay = document.getElementById('overlay');
+            overlay.style.opacity = '0';
+            setTimeout(function() {
+                overlay.style.display = 'none';
+            }, 800);
+        }
+
+        function setupTimerSpecific(targetDateStr, dId, hId, mId, sId) {
+            const targetDate = new Date(targetDateStr).getTime();
+            setInterval(function() {
+                const now = new Date().getTime();
+                const dist = targetDate - now;
+                if (dist > 0) {
+                    document.getElementById(dId).innerText = Math.floor(dist / (1000 * 60 * 60 * 24));
+                    document.getElementById(hId).innerText = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    document.getElementById(mId).innerText = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+                    document.getElementById(sId).innerText = Math.floor((dist % (1000 * 60)) / 1000);
+                }
+            }, 1000);
+        }
+
+        setupTimerSpecific("Nov 29, 2026 00:00:00", "d1", "h1", "m1", "s1"); 
+        setupTimerSpecific("Dec 01, 2026 00:00:00", "d2", "h2", "m2", "s2"); 
+        setupTimerSpecific("Dec 02, 2026 00:00:00", "d3", "h3", "m3", "s3"); 
+
+        const container = document.getElementById('sparkles');
+        for (let i = 0; i < 40; i++) {
+            let p = document.createElement('div');
+            p.className = 'sparkle';
+            p.style.left = Math.random() * 100 + 'vw';
+            p.style.animationDuration = (Math.random() * 5 + 4) + 's';
+            p.style.animationDelay = Math.random() * 5 + 's';
+            container.appendChild(p);
+        }
+    </script>
+</body>
+</html>
